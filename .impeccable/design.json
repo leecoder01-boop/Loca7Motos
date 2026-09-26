@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T02:43:58.0892813-03:00",
+  "title": "Design System: Rastro Motos",
+  "extensions": {
+    "colorMeta": {
+      "asphalt": {"role":"neutral","displayName":"Asphalt","canonical":"#09090a","tonalRamp":["oklch(15% 0.004 285)","oklch(25% 0.004 285)","oklch(36% 0.004 285)","oklch(48% 0.004 285)","oklch(60% 0.004 285)","oklch(72% 0.004 285)","oklch(84% 0.004 285)","oklch(95% 0.004 285)"]},
+      "coal": {"role":"neutral","displayName":"Coal","canonical":"#111113","tonalRamp":["oklch(15% 0.006 285)","oklch(25% 0.006 285)","oklch(36% 0.006 285)","oklch(48% 0.006 285)","oklch(60% 0.006 285)","oklch(72% 0.006 285)","oklch(84% 0.006 285)","oklch(95% 0.006 285)"]},
+      "technical-white": {"role":"neutral","displayName":"Technical White","canonical":"#f8f8f5","tonalRamp":["oklch(15% 0.008 100)","oklch(26% 0.008 100)","oklch(38% 0.008 100)","oklch(50% 0.008 100)","oklch(62% 0.008 100)","oklch(74% 0.008 100)","oklch(86% 0.008 100)","oklch(97% 0.008 100)"]},
+      "pure-white": {"role":"neutral","displayName":"Pure White","canonical":"#ffffff","tonalRamp":["oklch(15% 0 0)","oklch(26% 0 0)","oklch(38% 0 0)","oklch(50% 0 0)","oklch(62% 0 0)","oklch(74% 0 0)","oklch(86% 0 0)","oklch(100% 0 0)"]},
+      "roadbook-mist": {"role":"neutral","displayName":"Roadbook Mist","canonical":"#e9e9e7","tonalRamp":["oklch(15% 0.005 100)","oklch(26% 0.005 100)","oklch(38% 0.005 100)","oklch(50% 0.005 100)","oklch(62% 0.005 100)","oklch(74% 0.005 100)","oklch(86% 0.005 100)","oklch(95% 0.005 100)"]},
+      "rally-red": {"role":"primary","displayName":"Rally Red","canonical":"#c7132b","tonalRamp":["oklch(15% .08 24)","oklch(25% .13 24)","oklch(36% .18 24)","oklch(48% .22 24)","oklch(60% .21 24)","oklch(72% .16 24)","oklch(84% .09 24)","oklch(95% .03 24)"]},
+      "rally-red-dark": {"role":"primary","displayName":"Rally Red Dark","canonical":"#a30d21","tonalRamp":["oklch(15% .07 24)","oklch(25% .12 24)","oklch(36% .16 24)","oklch(48% .19 24)","oklch(60% .18 24)","oklch(72% .14 24)","oklch(84% .08 24)","oklch(95% .03 24)"]},
+      "rally-red-bright": {"role":"primary","displayName":"Rally Red Bright","canonical":"#ff6575","tonalRamp":["oklch(15% .08 20)","oklch(25% .13 20)","oklch(36% .18 20)","oklch(48% .22 20)","oklch(60% .23 20)","oklch(72% .19 20)","oklch(84% .11 20)","oklch(95% .04 20)"]},
+      "line-on-dark": {"role":"neutral","displayName":"Line on Dark","canonical":"rgba(255,255,255,.15)","tonalRamp":["oklch(15% 0 0)","oklch(27% 0 0)","oklch(39% 0 0)","oklch(51% 0 0)","oklch(63% 0 0)","oklch(75% 0 0)","oklch(87% 0 0)","oklch(95% 0 0)"]},
+      "catalog-card": {"role":"neutral","displayName":"Catalog Card","canonical":"#0d0d0f","tonalRamp":["oklch(15% .005 285)","oklch(25% .005 285)","oklch(36% .005 285)","oklch(48% .005 285)","oklch(60% .005 285)","oklch(72% .005 285)","oklch(84% .005 285)","oklch(95% .005 285)"]},
+      "catalog-card-hover": {"role":"neutral","displayName":"Catalog Card Hover","canonical":"#151518","tonalRamp":["oklch(15% .007 285)","oklch(25% .007 285)","oklch(36% .007 285)","oklch(48% .007 285)","oklch(60% .007 285)","oklch(72% .007 285)","oklch(84% .007 285)","oklch(95% .007 285)"]},
+      "muted-on-dark": {"role":"neutral","displayName":"Muted on Dark","canonical":"#aaaaaa","tonalRamp":["oklch(15% 0 0)","oklch(27% 0 0)","oklch(39% 0 0)","oklch(51% 0 0)","oklch(63% 0 0)","oklch(75% 0 0)","oklch(87% 0 0)","oklch(95% 0 0)"]},
+      "whatsapp-green": {"role":"tertiary","displayName":"WhatsApp Green","canonical":"#22c96b","tonalRamp":["oklch(15% .07 150)","oklch(25% .11 150)","oklch(36% .15 150)","oklch(48% .18 150)","oklch(60% .17 150)","oklch(72% .13 150)","oklch(84% .08 150)","oklch(95% .03 150)"]},
+      "status-green": {"role":"tertiary","displayName":"Status Green","canonical":"#55d890","tonalRamp":["oklch(15% .05 153)","oklch(25% .09 153)","oklch(36% .12 153)","oklch(48% .15 153)","oklch(60% .15 153)","oklch(72% .12 153)","oklch(84% .07 153)","oklch(95% .03 153)"]}
+    },
+    "typographyMeta": {
+      "display-hero": {"displayName":"Hero Display","purpose":"Hero and final conversion statements only."},
+      "display-section": {"displayName":"Section Display","purpose":"Major section headlines in uppercase."},
+      "title": {"displayName":"Component Title","purpose":"Motorcycle names and compact card headings."},
+      "body": {"displayName":"Body","purpose":"Explanations, controls, and operational copy."},
+      "label": {"displayName":"Route Label","purpose":"KM markers, categories, and technical annotations."}
+    },
+    "shadows": [
+      {"name":"floating-contact","value":"0 12px 34px rgba(0,0,0,.38)","purpose":"Separates the persistent WhatsApp shortcut from the flat page."},
+      {"name":"status-halo","value":"0 0 0 5px rgba(85,216,144,.12)","purpose":"Soft availability signal in the hero panel."}
+    ],
+    "motion": [
+      {"name":"state-fast","value":"200ms ease","purpose":"Buttons, navigation underlines, and contact tile state changes."},
+      {"name":"card-tone","value":"250ms ease","purpose":"Catalog card tonal hover transition without elevation."},
+      {"name":"reduced-motion","value":"0.01ms","purpose":"Effectively removes transitions and animations when reduced motion is requested."}
+    ],
+    "breakpoints": [
+      {"name":"navigation-collapse","value":"980px"},
+      {"name":"mobile","value":"640px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main route decision for catalog and WhatsApp actions.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Escolher minha moto <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-btn-primary{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:12px 20px;background:var(--red,#c7132b);color:#fff;font:700 14px/1.2 var(--body,Manrope,Arial,sans-serif);text-decoration:none;transition:transform .2s ease,background .2s ease}.ds-btn-primary:hover{background:var(--red-dark,#a30d21);transform:translateY(-2px)}.ds-btn-primary:focus-visible{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Light CTA Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "High-contrast action used inside a full rally-red field.",
+      "html": "<a class=\"ds-btn-light\" href=\"#\">Começar pelo WhatsApp <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-btn-light{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:12px 20px;background:#fff;color:#111113;font:700 14px/1.2 var(--body,Manrope,Arial,sans-serif);text-decoration:none;transition:transform .2s ease,background .2s ease,color .2s ease}.ds-btn-light:hover{background:#111113;color:#fff;transform:translateY(-2px)}.ds-btn-light:focus-visible{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Catalog Filter",
+      "kind": "chip",
+      "refersTo": "filter-default",
+      "description": "Square category filter whose selected state becomes a red route decision.",
+      "html": "<div class=\"ds-filters\" aria-label=\"Filtrar por categoria\"><button class=\"ds-filter ds-filter-active\" aria-pressed=\"true\">Todas</button><button class=\"ds-filter\" aria-pressed=\"false\">Urbanas</button><button class=\"ds-filter\" aria-pressed=\"false\">Estrada</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:7px;padding:14px;background:#09090a;color:#f8f8f5;font-family:var(--body,Manrope,Arial,sans-serif)}.ds-filter{min-height:42px;border:1px solid #3a3a3f;background:transparent;color:inherit;padding:8px 15px;font:inherit;font-size:13px;cursor:pointer;transition:background .2s ease,border-color .2s ease}.ds-filter:hover,.ds-filter-active{background:var(--red,#c7132b);border-color:var(--red,#c7132b)}.ds-filter:focus-visible{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Catalog Search",
+      "kind": "input",
+      "description": "Minimal bottom-rule search field paired with the category filters.",
+      "html": "<label class=\"ds-search\"><span class=\"ds-search-label\">Buscar por nome ou modelo</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"></circle><path d=\"m20 20-4-4\"></path></svg><input type=\"search\" placeholder=\"Buscar modelo\"></label>",
+      "css": ".ds-search{width:min(260px,100%);display:flex;align-items:center;gap:8px;border-bottom:1px solid #555;padding:0 4px;background:#09090a;color:#fff;font-family:var(--body,Manrope,Arial,sans-serif)}.ds-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.ds-search svg{width:19px;fill:none;stroke:#aaa;stroke-width:1.8}.ds-search input{width:100%;height:42px;border:0;outline:0;background:transparent;color:#fff;font:inherit}.ds-search input::placeholder{color:#9c9ca0}.ds-search:focus-within{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Motorcycle Card",
+      "kind": "card",
+      "refersTo": "catalog-card",
+      "description": "Ruled catalog unit with category-image truth labeling, visible price, specs, and inquiry action.",
+      "html": "<article class=\"ds-bike-card\"><div class=\"ds-bike-image\"><span class=\"ds-bike-index\">01</span><span class=\"ds-bike-type\">urbana</span><span class=\"ds-image-note\">Imagem de categoria</span></div><div class=\"ds-bike-info\"><div class=\"ds-bike-title-row\"><h3>Rastro N150</h3><div class=\"ds-bike-price\">R$ 89<small>por dia · exemplo</small></div></div><div class=\"ds-bike-specs\"><span>Ano<b>2025</b></span><span>Motor<b>150 cc</b></span><span>Câmbio<b>5 marchas</b></span></div><button class=\"ds-bike-action\">Consultar esta moto <span aria-hidden=\"true\">↗</span></button></div></article>",
+      "css": ".ds-bike-card{width:min(420px,100%);border:1px solid #323236;background:#0d0d0f;color:#f8f8f5;font-family:var(--body,Manrope,Arial,sans-serif);transition:background .25s ease}.ds-bike-card:hover{background:#151518}.ds-bike-image{height:210px;position:relative;overflow:hidden;background:linear-gradient(145deg,#2a2a2e,#101012 55%,#0d0d0f)}.ds-bike-index,.ds-bike-type,.ds-image-note{position:absolute;text-transform:uppercase}.ds-bike-index{top:16px;left:16px;color:#aaa;font:600 12px/1 var(--display,'Barlow Condensed',sans-serif)}.ds-bike-type{top:14px;right:14px;padding:5px 8px;background:rgba(9,9,10,.82);font-size:10px;letter-spacing:.1em}.ds-image-note{left:16px;bottom:10px;color:#d0d0d2;font-size:9px;letter-spacing:.08em}.ds-bike-info{padding:18px 20px 22px}.ds-bike-title-row{display:flex;justify-content:space-between;gap:16px}.ds-bike-title-row h3{margin:0;font:600 26px/1 var(--display,'Barlow Condensed',sans-serif);text-transform:uppercase}.ds-bike-price{text-align:right;color:var(--red-bright,#ff6575);font:700 22px/1 var(--display,'Barlow Condensed',sans-serif)}.ds-bike-price small{display:block;color:#888;font:500 10px/1.5 var(--body,Manrope,sans-serif)}.ds-bike-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0;border-top:1px solid #2d2d31;padding-top:16px}.ds-bike-specs span{color:#8d8d91;font-size:10px;text-transform:uppercase}.ds-bike-specs b{display:block;margin-top:3px;color:#eee;font-size:12px;text-transform:none}.ds-bike-action{width:100%;min-height:44px;display:flex;justify-content:space-between;align-items:center;border:1px solid #45454a;background:transparent;color:#fff;padding:10px 13px;font-weight:700}.ds-bike-action:hover{background:#fff;color:#111;border-color:#fff}.ds-bike-action:focus-visible{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Availability Panel",
+      "kind": "custom",
+      "description": "Translucent hero status panel that labels the catalog as demonstrative.",
+      "html": "<aside class=\"ds-availability\"><span class=\"ds-status-dot\"></span><div><strong>Prontas para partir</strong><small>Catálogo demonstrativo · 30 modelos</small></div></aside>",
+      "css": ".ds-availability{width:min(330px,100%);display:flex;gap:14px;padding:18px;border-top:1px solid rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.15);background:rgba(9,9,10,.6);color:#f8f8f5;font-family:var(--body,Manrope,Arial,sans-serif)}.ds-availability strong,.ds-availability small{display:block}.ds-availability small{margin-top:3px;color:#aaa;font-size:12px}.ds-status-dot{width:10px;height:10px;margin-top:7px;border-radius:50%;background:#55d890;box-shadow:0 0 0 5px rgba(85,216,144,.12);flex:none}"
+    },
+    {
+      "name": "KM Marker",
+      "kind": "custom",
+      "description": "Recurring route marker that introduces major page sections.",
+      "html": "<div class=\"ds-km-marker\"><span>KM 118</span><b aria-hidden=\"true\"></b></div>",
+      "css": ".ds-km-marker{display:flex;align-items:center;gap:16px;color:#f8f8f5;font:700 12px/1 var(--display,'Barlow Condensed','Arial Narrow',sans-serif);letter-spacing:.14em}.ds-km-marker b{height:1px;flex:1;background:rgba(255,255,255,.23)}"
+    },
+    {
+      "name": "Desktop Navigation",
+      "kind": "nav",
+      "refersTo": "nav-header",
+      "description": "Fixed asphalt-glass header with centered route anchors and a direct contact action.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-brand-mark\">R</span><span>RASTRO<br><b>MOTOS</b></span></a><div class=\"ds-nav-links\"><a href=\"#\">A Rastro</a><a href=\"#\">Motos</a><a href=\"#\">Serviços</a></div><a class=\"ds-nav-action\" href=\"#\">Falar agora</a></nav>",
+      "css": ".ds-nav{min-height:76px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;padding:0 32px;background:rgba(9,9,10,.93);color:#f8f8f5;border-bottom:1px solid rgba(255,255,255,.15);font-family:var(--body,Manrope,Arial,sans-serif)}.ds-brand{display:flex;align-items:center;gap:11px;color:inherit;text-decoration:none;font:600 17px/.82 var(--display,'Barlow Condensed',sans-serif);letter-spacing:.08em}.ds-brand b{color:var(--red-bright,#ff6575)}.ds-brand-mark{width:34px;height:34px;display:grid;place-items:center;background:var(--red,#c7132b);color:#fff;font:800 23px/1 var(--display,'Barlow Condensed',sans-serif);clip-path:polygon(0 0,100% 0,78% 100%,0 100%)}.ds-nav-links{justify-self:center;display:flex;gap:32px}.ds-nav-links a{position:relative;color:#d1d1d0;text-decoration:none;font-size:13px;font-weight:600}.ds-nav-links a:after{content:'';position:absolute;height:2px;left:0;right:100%;bottom:-8px;background:var(--red,#c7132b);transition:right .2s ease}.ds-nav-links a:hover:after{right:0}.ds-nav-action{border:1px solid #3d3d41;padding:9px 14px;color:inherit;text-decoration:none;font-size:13px;font-weight:700}.ds-nav-action:hover{background:var(--red,#c7132b);border-color:var(--red,#c7132b)}.ds-nav a:focus-visible{outline:3px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Floating WhatsApp",
+      "kind": "button",
+      "refersTo": "whatsapp-float",
+      "description": "Persistent circular shortcut and the only strongly elevated component.",
+      "html": "<a class=\"ds-whatsapp\" href=\"#\" aria-label=\"Falar pelo WhatsApp\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.5 3.5A11.7 11.7 0 0 0 2.1 17.6L.5 23.5l6-1.6a11.7 11.7 0 0 0 14-18.4Zm-8.3 16.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.6 1 1-3.5-.2-.4a8.6 8.6 0 1 1 8.3 4.5Z\"/></svg></a>",
+      "css": ".ds-whatsapp{width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#22c96b;color:#fff;box-shadow:0 12px 34px rgba(0,0,0,.38);transition:transform .2s ease}.ds-whatsapp:hover{transform:translateY(-4px) scale(1.03)}.ds-whatsapp:focus-visible{outline:3px solid #fff;outline-offset:4px}.ds-whatsapp svg{width:29px;fill:currentColor}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Roadbook de Rally Editorial",
+    "overview": "Rastro Motos transforma a página em uma sequência de trechos: campos de asfalto quase preto, intervalos de papel técnico e vermelho pista conduzem o visitante da promessa de liberdade até a comparação objetiva e o contato. A atmosfera é sofisticada e mecânica sem virar decoração temática; motos, números, especificações e decisões continuam no primeiro plano.\n\nA assinatura nasce da continuidade dos marcos quilométricos, da linguagem de rota, das linhas técnicas e dos filtros que tornam o catálogo navegável como um roadbook. A experiência permanece honesta: preços, frota, endereço e imagens de categoria são explicitamente demonstrativos.",
+    "keyCharacteristics": [
+      "Contraste cinematográfico entre asfalto, papel técnico e vermelho pista.",
+      "Tipografia condensada, maiúscula e monumental para voz editorial; sans humanista para leitura e ação.",
+      "Composição modular, linhas finas e cantos retos inspirados em placas e fichas de percurso.",
+      "Marcos KM e vocabulário de rota conectando as seções sem ornamento persistente na viewport.",
+      "Catálogo comparável, filtrável e progressivo no celular, com verdade visual explícita sobre as imagens."
+    ],
+    "rules": [
+      {"name":"The Route Continuity Rule","body":"Preserve the sequence through KM markers, route language, section contrast, and navigable filters.","section":"overview"},
+      {"name":"The Red Field Rule","body":"Use rally red for decisive states and occasional full-width fields; never scatter it as decoration across every component.","section":"colors"},
+      {"name":"The Technical Paper Rule","body":"Light sections use the cool roadbook mist so the page feels printed and mechanical rather than sterile.","section":"colors"},
+      {"name":"The Two Voices Rule","body":"Barlow Condensed announces route, speed, and hierarchy; Manrope explains, compares, and enables action. Do not swap their jobs.","section":"typography"},
+      {"name":"The Progressive Catalog Rule","body":"On mobile, show six cards only for the untouched all-motorcycles state; filters and search must always reveal their complete matching set.","section":"layout"},
+      {"name":"The Fixed Action Rule","body":"The mobile navigation must carry its own full-width WhatsApp action because the desktop header action is hidden below 980px; the floating contact remains a secondary persistent route.","section":"layout"},
+      {"name":"The Flat Machinery Rule","body":"Use borders and tonal steps for ordinary hierarchy; reserve ambient shadow for persistent floating utility.","section":"elevation"},
+      {"name":"The Signal Circle Rule","body":"Circles indicate availability, direct contact, or route resonance; never round every container to make the interface friendlier.","section":"shapes"}
+    ],
+    "dos": [
+      "Do preserve KM markers, route language, and catalog controls as the recurring roadbook signature.",
+      "Do label catalog artwork as category imagery and state that it does not represent the named motorcycle.",
+      "Do keep price, availability, address, hours, and operational claims visibly demonstrative until real data replaces them.",
+      "Do keep specifications and price visible without hover, and retain the progressive six-card mobile catalog only in the untouched state.",
+      "Do provide the WhatsApp action inside the open mobile navigation as well as the floating shortcut.",
+      "Do preserve visible focus and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't turn the catalog into detached rounded cards with diffuse shadows.",
+      "Don't use red on every surface; it must retain the force of an active state or route decision.",
+      "Don't use category artwork as if it were a verified photograph of a specific motorcycle model.",
+      "Don't hide filtered or searched mobile results behind the initial six-card progressive limit.",
+      "Don't remove the mobile-menu WhatsApp row when the desktop header action collapses."
+    ]
+  }
+}
