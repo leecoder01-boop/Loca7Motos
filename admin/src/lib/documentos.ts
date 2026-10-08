@@ -1,0 +1,22 @@
+import { z } from 'zod';
+import { clienteRecordSchema } from './clientes';
+import { motoRecordSchema } from './motos';
+import { contratoRecordSchema } from './contratos';
+export const clauseLabels={danos:'Franquia e responsabilidade por danos',multas:'Multas e infrações',combustivel:'Combustível',manutencao:'Manutenção',acidente:'Acidente',roubo:'Roubo ou furto',atraso:'Multa por atraso',devolucao:'Regras de devolução',rescisao:'Condições de rescisão'} as const;
+export const companyLabels={razao_social:'Razão social / nome da locadora',nome_fantasia:'Nome fantasia',documento:'CNPJ / CPF da locadora',endereco:'Endereço completo',cidade:'Cidade',estado:'Estado',cep:'CEP',telefone:'Telefone',email:'E-mail',representante:'Representante legal',documento_representante:'Documento do representante'} as const;
+const text=z.string().trim().max(5000);
+export const companySchema=z.object(Object.fromEntries(Object.keys(companyLabels).map(k=>[k,z.string().trim().max(500)])) as Record<keyof typeof companyLabels,z.ZodString>);
+export const clausesSchema=z.object(Object.fromEntries(Object.keys(clauseLabels).map(k=>[k,text])) as Record<keyof typeof clauseLabels,typeof text>);
+export const modelSchema=z.object({locadora:companySchema,forma_pagamento:z.string().trim().max(500),clausulas:clausesSchema});
+const optionalDate=z.string().refine(v=>!v||(/^\d{4}-\d{2}-\d{2}$/.test(v)&&!Number.isNaN(Date.parse(v))&&new Date(`${v}T12:00:00Z`).toISOString().slice(0,10)===v),'Informe uma data válida.');
+export const inspectionSchema=z.object({data:optionalDate,responsavel:z.string().trim().max(200),quilometragem:z.string().regex(/^\d*$/).refine(v=>!v||Number(v)<=2147483647),combustivel:z.string().trim().max(100),condicao:text,acessorios:text,referencias:text});
+export const documentInputSchema=modelSchema.extend({chassi:z.string().trim().max(100),renavam:z.string().trim().max(100),observacoes:text,retirada:inspectionSchema,devolucao:inspectionSchema,aceite:z.object({registrado:z.boolean(),nome:z.string().trim().max(200),data:optionalDate,meio:z.string().trim().max(200),referencia:text})}).superRefine((v,ctx)=>{if(v.aceite.registrado&&(!v.aceite.nome||!v.aceite.data||!v.aceite.meio||!v.aceite.referencia))ctx.addIssue({code:'custom',path:['aceite'],message:'Para registrar aceite, informe nome, data, meio e referência da evidência.'});});
+export const contentSchema=documentInputSchema.extend({cliente:clienteRecordSchema,moto:motoRecordSchema,locacao:contratoRecordSchema,modelo_version:z.string().nullable(),registrado_por:z.uuid(),minuta:z.literal(true)});
+export const documentRecordSchema=z.object({id:z.uuid(),contrato_id:z.uuid(),versao:z.number().int(),conteudo:contentSchema,created_at:z.string().datetime({offset:true})});
+export type DocumentInput=z.infer<typeof documentInputSchema>;
+export type Model=z.infer<typeof modelSchema>;
+export type DocumentRecord=z.infer<typeof documentRecordSchema>;
+export type DocResult={ok:boolean;message:string;id?:string};
+export const blankInspection=()=>({data:'',responsavel:'',quilometragem:'',combustivel:'',condicao:'',acessorios:'',referencias:''});
+export function blankModel():Model{return {locadora:Object.fromEntries(Object.keys(companyLabels).map(k=>[k,''])) as Model['locadora'],forma_pagamento:'',clausulas:Object.fromEntries(Object.keys(clauseLabels).map(k=>[k,''])) as Model['clausulas']};}
+export const inspectionLabels={data:'Data da vistoria',responsavel:'Responsável pela vistoria',quilometragem:'Quilometragem (km)',combustivel:'Nível de combustível',condicao:'Estado da moto e danos encontrados',acessorios:'Chaves, documentos e acessórios',referencias:'Referências das fotos / laudo (sem upload nesta etapa)'} as const;

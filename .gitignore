@@ -1,0 +1,40 @@
+# Environment files may contain API keys and other secrets.
+.env*
+!.env.example
+
+# Local dependencies, framework output, and deployment metadata.
+node_modules/
+.next/
+.next-diagnostic-backup/
+.vercel/
+.claude/
+out/
+coverage/
+.turbo/
+build/
+**/build/
+tmp/
+**/tmp/
+temp/
+**/temp/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local logs and temporary files.
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+.DS_Store
+Thumbs.db
+
+# Screenshots and browser captures; keep product images/assets tracked.
+screenshots/
+**/screenshots/
+captures/
+**/captures/
+codex-clipboard-*.png
+codex-clipboard-*.jpg
+codex-clipboard-*.jpeg

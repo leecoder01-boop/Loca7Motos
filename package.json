@@ -1,0 +1,14 @@
+{
+  "name": "rastro-motos",
+  "version": "1.0.0",
+  "description": "Site institucional Rastro Motos",
+  "scripts": {
+    "dev": "serve dist -l 3000",
+    "start": "serve dist -l 3000"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "motion": "^13.4.4",
+    "serve": "^14.2.0"
+  }
+}

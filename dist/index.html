@@ -8,7 +8,7 @@
   <title>Rastro Motos — A estrada começa aqui</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230a0a0b'/%3E%3Cpath d='M13 42 27 18h13c9 0 13 5 11 12-1 4-4 7-9 9l8 7H38l-7-7-4 7H13Zm19-13h8c2 0 3-1 3-3 0-1-1-2-3-2h-5Z' fill='%23f1262f'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -37,25 +37,37 @@
 
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo" role="img" aria-label="Moto vermelha em uma estrada de serra ao amanhecer"></div>
-      <div class="hero-shade"></div>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1 id="hero-title">A estrada não espera.</h1>
-          <p class="hero-lead">Escolha a moto. Trace o destino. A gente cuida do que existe entre você e a próxima curva.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#catalogo">Escolher minha moto <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#historia">Conhecer a Rastro</a>
-          </div>
-          <p class="route-label">Rota de abertura · SP — SERRA / KM 001</p>
+      <div class="hero-photo" role="img" aria-label="Moto em uma estrada entre montanhas com a frase A Estrada Não Espera"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 id="hero-title" class="sr-only">A estrada não espera.</h1>
+          <p class="hero-copy-title">Sua próxima aventura começa aqui.</p>
+          <p class="hero-subtitle">Escolha sua moto, alugue sem complicações e tenha liberdade para seguir seu próprio caminho.</p>
+          <a class="hero-cta" href="#catalogo">Ver nossas motos <span aria-hidden="true">→</span></a>
         </div>
-        <aside class="availability" aria-label="Disponibilidade demonstrativa">
-          <span class="status-dot"></span>
-          <div><strong>Prontas para partir</strong><small>Catálogo demonstrativo · 30 modelos</small></div>
-        </aside>
-      </div>
-      <div class="hero-bottom">
-        <span>DIÁRIAS A PARTIR DE</span><strong>R$ 89<small>/dia</small></strong><em>valor ilustrativo</em>
+        <div class="hero-cards">
+          <article class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3>Sua moto ideal</h3>
+            <p>Encontre a moto certa para você.</p>
+          </article>
+          <article class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </div>
+            <h3>Aluguel fácil</h3>
+            <p>Escolha o período e faça sua reserva.</p>
+          </article>
+          <article class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+            </div>
+            <h3>Liberdade total</h3>
+            <p>Mais autonomia para ir além.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -112,8 +124,9 @@
       </div>
     </section>
 
-    <section class="services section-red" id="servicos" aria-labelledby="services-title">
-      <div class="section-marker marker-red"><span>KM 203</span><b></b></div>
+    <div class="services-wrap">
+<section class="services section-blue" id="servicos" aria-labelledby="services-title">
+      <div class="section-marker marker-blue"><span>KM 203</span><b></b></div>
       <div class="services-head">
         <h2 id="services-title">O que vai com você.</h2>
         <p>Uma locação desenhada para tirar atrito do caminho — da retirada à devolução.</p>
@@ -125,8 +138,9 @@
         <article><span>04</span><h3>Suporte na rota</h3><p>Canal direto para dúvidas e orientação durante a locação.</p></article>
       </div>
     </section>
+  </div>
 
-    <section class="roadbook section-light" aria-labelledby="roadbook-title">
+  <section class="roadbook section-light" aria-labelledby="roadbook-title">
       <div class="section-marker"><span>KM 271</span><b></b></div>
       <div class="roadbook-layout">
         <div class="roadbook-title"><h2 id="roadbook-title">Sua primeira locação, sem desvio.</h2></div>
@@ -174,6 +188,9 @@
   <a class="whatsapp-float" href="https://wa.me/5511999999999?text=Olá%2C%20vim%20pelo%20site%20da%20Rastro%20Motos." target="_blank" rel="noopener" aria-label="Falar com a Rastro Motos pelo WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 2.1 17.6L.5 23.5l6-1.6a11.7 11.7 0 0 0 14-18.4Zm-8.3 16.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.6 1 1-3.5-.2-.4a8.6 8.6 0 1 1 8.3 4.5Zm4.7-6.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1a7 7 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.5a.5.5 0 0 0 0-.5l-.8-2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3 0-.1-.3-.2-.5-.3Z"/></svg>
   </a>
-  <script src="app.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
+
