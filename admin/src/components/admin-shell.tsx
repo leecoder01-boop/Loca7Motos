@@ -40,7 +40,7 @@ function SidebarContent({ onNavigate, email, role }: { onNavigate?: () => void; 
     </nav>
     <div className="mt-auto pt-8">
       <div className="mx-2 mb-5 rounded-lg border border-blue-100 bg-blue-50/60 p-4"><CircleHelp size={18} className="mb-3 text-[#42a5f5]" /><p className="text-xs font-semibold text-slate-800">Sua frota. Seu ritmo.</p><p className="mt-2 text-[11px] leading-relaxed text-slate-600">Cada locação conectada ao seu próximo recebimento.</p></div>
-      <a href="/" className="nav-item" onClick={onNavigate}><ArrowUpRight size={17} />Visitar o site</a>
+      <a href="https://loca7-motos-site.vercel.app/" target="_blank" rel="noreferrer" className="nav-item" onClick={onNavigate}><ArrowUpRight size={17} />Visitar o site</a>
       <div className="mt-5 flex items-center gap-3 border-t border-slate-200 px-3 pt-5"><span className="avatar">{role==='admin'?'AD':'AT'}</span><div className="min-w-0"><p className="text-xs font-semibold text-slate-800">{role==='admin'?'Administrador':'Atendente'}</p><p className="mt-1 truncate text-[10px] text-slate-500">{email}</p></div></div>
     </div>
   </>;
