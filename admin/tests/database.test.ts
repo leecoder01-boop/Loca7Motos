@@ -45,6 +45,7 @@ test("migração PostgreSQL, RLS, integridade e atualização de status", async 
     await db.exec(await readFile(new URL("../supabase/migrations/202610080016_proteger_preco_moto_atendente.sql",import.meta.url),"utf8"));
     await db.exec(await readFile(new URL("../supabase/migrations/202610080017_limite_atendimento_ia.sql",import.meta.url),"utf8"));
     await db.exec(await readFile(new URL("../supabase/migrations/202610080018_protecao_e_recuperacao_de_dados.sql",import.meta.url),"utf8"));
+    await db.exec(await readFile(new URL("../supabase/migrations/202610090019_catalogo_publico.sql",import.meta.url),"utf8"));
     const selfSignup="00000000-0000-4000-8000-000000000007";
     await db.query("insert into auth.users(id,email) values ($1,'cadastro-publico@loca7moto.test')",[selfSignup]);
     assert.equal((await db.query<{ativo:boolean}>("select ativo from perfis_usuario where id=$1",[selfSignup])).rows[0].ativo,false);
@@ -274,6 +275,11 @@ test("migração PostgreSQL, RLS, integridade e atualização de status", async 
       await assert.rejects(db.query("select * from clientes"));
       await assert.rejects(db.query('select * from alertas_resolucoes'));
       await assert.rejects(db.query("select * from motos"));
+      const publicMoto=await db.query<{id:string;status:string;valor_locacao:number}>('select id,status,valor_locacao from motos where id=$1',[moto]);
+      assert.equal(publicMoto.rows.length,1);
+      await assert.rejects(db.query('select placa from motos'));
+      await assert.rejects(db.query("update motos set publicado=false where id=$1",[moto]));
+      await assert.rejects(db.query("insert into motos(marca,modelo,ano,placa,valor_locacao) values ('Visitante','Negado',2026,'VIS1234',10)"));
       await assert.rejects(db.query('select * from pagamentos'));
       await assert.rejects(db.query("select painel_dados()"));
     });

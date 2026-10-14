@@ -23,15 +23,16 @@ const fields:{name:keyof MotoValues;label:string;required?:boolean;max?:number;n
   {name:'quilometragem',label:'Quilometragem (km)',required:true,numeric:true},
   {name:'tipo_valor',label:'Tipo de valor',required:true},
   {name:'valor_locacao',label:'Valor (R$)',required:true,placeholder:'85,90'},
+  {name:'foto_url',label:'URL da foto (HTTPS)',max:2048,placeholder:'https://...'},
   {name:'status',label:'Status',required:true},
   {name:'observacoes',label:'Observações',max:5000},
 ];
 const controlClass='h-10 w-full rounded-md border border-input bg-white px-3 text-sm shadow-none focus-visible:outline-2 focus-visible:outline-ring aria-invalid:border-destructive';
-const empty=():MotoValues=>({marca:'',modelo:'',ano:'',placa:'',cor:'',quilometragem:'0',tipo_valor:'semanal',valor_locacao:'',status:'disponivel',observacoes:''});
+const empty=():MotoValues=>({marca:'',modelo:'',ano:'',placa:'',cor:'',quilometragem:'0',tipo_valor:'semanal',valor_locacao:'',foto_url:'',status:'disponivel',publicado:'true',observacoes:''});
 const displayValue=(moto:Moto)=>`${money(moto.valor_locacao)} / ${moto.tipo_valor === 'diaria' ? 'dia' : moto.tipo_valor === 'semanal' ? 'semana' : 'mês'}`;
 
 function MotoForm({moto,onCancel,onSaved,onBusy,canAdmin}: {moto:Moto|null;onCancel:()=>void;onSaved:(message:string)=>void;onBusy:(busy:boolean)=>void;canAdmin:boolean}) {
-  const [values,setValues]=useState<MotoValues>(()=>moto ? {...moto,ano:String(moto.ano),quilometragem:String(moto.quilometragem),valor_locacao:moto.valor_locacao.toFixed(2).replace('.',',')} : empty());
+  const [values,setValues]=useState<MotoValues>(()=>moto ? {...moto,ano:String(moto.ano),quilometragem:String(moto.quilometragem),valor_locacao:moto.valor_locacao.toFixed(2).replace('.',','),foto_url:moto.foto_url??'',publicado:moto.publicado?'true':'false'} : empty());
   const [result,setResult]=useState<MotoResult|null>(null);
   const [pending,startTransition]=useTransition();
   const inFlight=useRef(false);
@@ -49,6 +50,7 @@ function MotoForm({moto,onCancel,onSaved,onBusy,canAdmin}: {moto:Moto|null;onCan
   }
   return <form onSubmit={submit} className="space-y-5">
     {moto && <><input type="hidden" name="id" value={moto.id}/><input type="hidden" name="version" value={moto.updated_at ?? ''}/></>}
+    <input type="hidden" name="publicado" value="false"/>
     <p className="text-xs leading-relaxed text-slate-500">Campos com * são obrigatórios. Informe o preço por diária, semana ou mensalidade. Nenhum contrato será criado neste cadastro.</p>
     {result && <div ref={summary} tabIndex={-1} role="alert" className="rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-800">{result.message}</div>}
     <fieldset disabled={pending} className="grid grid-cols-1 gap-4 disabled:opacity-70 sm:grid-cols-2">{fields.map(field=>{
@@ -64,6 +66,7 @@ function MotoForm({moto,onCancel,onSaved,onBusy,canAdmin}: {moto:Moto|null;onCan
         {error && <p id={`${id}-error`} className="mt-1 text-xs text-rose-700">{error}</p>}
       </div>;
     })}</fieldset>
+    <label className="flex min-h-10 items-center gap-2 text-xs font-medium text-slate-700"><input type="checkbox" name="publicado" value="true" checked={values.publicado==='true'} onChange={event=>setValues(current=>({...current,publicado:event.target.checked?'true':'false'}))} className="size-4 accent-blue-700"/>Exibir esta moto no catálogo público</label>
     <div className="sticky -bottom-6 flex flex-wrap justify-end gap-2 border-t border-slate-100 bg-white py-4"><Button type="button" variant="outline" disabled={pending} onClick={onCancel}>Cancelar</Button><Button type="submit" disabled={pending}>{pending ? 'Salvando…' : moto ? 'Salvar alterações' : 'Cadastrar moto'}</Button></div>
   </form>;
 }

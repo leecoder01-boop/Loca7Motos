@@ -1,0 +1,11 @@
+admin/node_modules/
+admin/.next/
+admin/.next-diagnostic-backup/
+admin/out/
+admin/legacy-static-preview/
+admin/.env.local
+.env.local
+.impeccable/
+fotos montanha.png.png
+DESIGN.md
+PRODUCT.md

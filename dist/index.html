@@ -4,73 +4,100 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0b">
-  <meta name="description" content="Rastro Motos — catálogo demonstrativo de aluguel de motos para cidade, estrada e aventura.">
-  <title>Rastro Motos — A estrada começa aqui</title>
+  <meta name="description" content="Loca7 Motos: aluguel de motos com planos flexíveis para trabalho, cidade e dia a dia.">
+  <meta property="og:site_name" content="Loca7 Motos">
+  <meta property="og:title" content="Loca7 Motos | Aluguel de motos">
+  <meta property="og:description" content="Alugue sua moto com segurança, praticidade e planos flexíveis.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Loca7 Motos | Aluguel de motos">
+  <meta name="twitter:description" content="Alugue sua moto com segurança, praticidade e planos flexíveis.">
+  <meta name="motos-api" content="https://loca7-motos.vercel.app/admin/api/catalogo/">
+  <title>Loca7 Motos | Aluguel de motos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%230a0a0b'/%3E%3Cpath d='M13 42 27 18h13c9 0 13 5 11 12-1 4-4 7-9 9l8 7H38l-7-7-4 7H13Zm19-13h8c2 0 3-1 3-3 0-1-1-2-3-2h-5Z' fill='%23f1262f'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23081120'/%3E%3Cpath d='M14 15h39L29 51H16l17-25H14z' fill='%2308aaf3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=20261014-1">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header" id="topo">
-    <a class="brand" href="#topo" aria-label="Rastro Motos, início">
-      <span class="brand-mark">R</span>
-      <span>RASTRO<br><b>MOTOS</b></span>
+    <a class="brand brand-loca7" href="#topo" aria-label="Loca7 Motos, início">
+      <img class="brand-logo-image" src="assets/loca7-logo-header.png" alt="Loca7 Motos">
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
       <span></span><span></span><span></span><span class="sr-only">Abrir menu</span>
     </button>
     <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-      <a href="#historia">A Rastro</a>
+      <a class="nav-active" href="#topo">Início</a>
       <a href="#catalogo">Motos</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#quero-alugar">Quero alugar</a>
+      <a href="#servicos">Como funciona</a>
+      <a href="#historia">Sobre nós</a>
       <a href="#contato">Contato</a>
       <a class="mobile-whatsapp" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20conhecer%20as%20motos%20da%20Rastro." target="_blank" rel="noopener">WhatsApp ↗</a>
     </nav>
     <a class="whatsapp-header" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20conhecer%20as%20motos%20da%20Rastro." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 2.1 17.6L.5 23.5l6-1.6a11.7 11.7 0 0 0 14-18.4Zm-8.3 16.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.6 1 1-3.5-.2-.4a8.6 8.6 0 1 1 8.3 4.5Zm4.7-6.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1a7 7 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.5a.5.5 0 0 0 0-.5l-.8-2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3 0-.1-.3-.2-.5-.3Z"/></svg>
-      Falar agora
+      Falar no WhatsApp
     </a>
   </header>
 
   <main id="conteudo">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo" role="img" aria-label="Moto em uma estrada entre montanhas com a frase A Estrada Não Espera"></div>
+      <div class="hero-photo" role="img" aria-label="Homem observando a paisagem de uma cidade ao lado de uma moto e da locadora Loca7 Motos">
+        <img class="hero-day-image" src="assets/hero-dia.png" alt="" aria-hidden="true">
+        <img class="hero-night-image" src="assets/hero-noite.png" alt="" aria-hidden="true">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-mode-toggle" role="group" aria-label="Alternar entre dia e noite">
+        <button class="hero-mode-button is-active" type="button" data-hero-mode="day" aria-pressed="true">Dia</button>
+        <button class="hero-mode-button" type="button" data-hero-mode="night" aria-pressed="false">Noite</button>
+      </div>
       <div class="hero-content">
         <div class="hero-text">
-          <h1 id="hero-title" class="sr-only">A estrada não espera.</h1>
-          <p class="hero-copy-title">Sua próxima aventura começa aqui.</p>
-          <p class="hero-subtitle">Escolha sua moto, alugue sem complicações e tenha liberdade para seguir seu próprio caminho.</p>
-          <a class="hero-cta" href="#catalogo">Ver nossas motos <span aria-hidden="true">→</span></a>
+          <p class="hero-eyebrow">Locação de motos</p>
+          <h1 id="hero-title"><span>Mobilidade</span><span>pra quem</span><span class="hero-accent">não pode parar</span></h1>
+          <p class="hero-subtitle">Alugue sua moto com segurança, praticidade e sem burocracia. Planos flexíveis para o seu dia a dia, trabalho ou lazer.</p>
+          <div class="hero-actions">
+            <a class="hero-cta hero-cta-primary" href="https://wa.me/5511999999999?text=Olá%2C%20quero%20alugar%20uma%20moto%20na%20Rastro." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 2.1 17.6L.5 23.5l6-1.6a11.7 11.7 0 0 0 14-18.4Zm-8.3 16.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.6 1 1-3.5-.2-.4a8.6 8.6 0 1 1 8.3 4.5Z"/></svg>
+              Alugar uma moto <span aria-hidden="true">→</span>
+            </a>
+            <a class="hero-cta hero-cta-secondary" href="#catalogo">Ver motos disponíveis <span aria-hidden="true">→</span></a>
+          </div>
         </div>
         <div class="hero-cards">
           <article class="hero-card">
             <div class="hero-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.2c0 4.6 3.2 8.1 7.5 9.8 4.3-1.7 7.5-5.2 7.5-9.8V6L12 3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg>
             </div>
-            <h3>Sua moto ideal</h3>
-            <p>Encontre a moto certa para você.</p>
+            <div><h3>Motos revisadas</h3><p>Segurança em primeiro lugar</p></div>
           </article>
           <article class="hero-card">
             <div class="hero-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></svg>
             </div>
-            <h3>Aluguel fácil</h3>
-            <p>Escolha o período e faça sua reserva.</p>
+            <div><h3>Documentação em dia</h3><p>Sem dor de cabeça</p></div>
           </article>
           <article class="hero-card">
             <div class="hero-card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m13.5 2-9 12h7l-1 8 9-12h-7z"/></svg>
             </div>
-            <h3>Liberdade total</h3>
-            <p>Mais autonomia para ir além.</p>
+            <div><h3>Planos flexíveis</h3><p>Diária, semanal ou mensal</p></div>
+          </article>
+          <article class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><path d="M4 13H2v5h4v-5H4Zm16 0h2v5h-4v-5h2ZM18 19c-1 2-3 2-5 2"/></svg>
+            </div>
+            <div><h3>Suporte via WhatsApp</h3><p>Atendimento rápido</p></div>
           </article>
         </div>
       </div>
     </section>
 
+    <div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-hero-story" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#06101e"/><stop offset="1" stop-color="#e8ecf1"/></linearGradient></defs><path d="M0 56C170 4 302 83 486 61s297-55 481-22 312 34 473-8v81H0Z" fill="url(#wave-hero-story)"/><path d="M0 56C170 4 302 83 486 61s297-55 481-22 312 34 473-8" fill="none" stroke="#42a5f5" stroke-opacity=".46" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
     <section class="story section-light" id="historia" aria-labelledby="story-title">
       <div class="section-marker"><span>KM 042</span><b></b></div>
       <div class="story-grid">
@@ -80,26 +107,42 @@
         <div class="story-copy">
           <p>A Rastro Motos é uma marca provisória criada para este projeto. A história real virá depois; por enquanto, ela representa uma locadora feita por quem acredita que mobilidade também pode ter personalidade.</p>
           <p>Sem balcão complicado, sem linguagem difícil. Você compara, escolhe e chama. Da rotina na cidade ao fim de semana na serra, existe uma moto certa para o seu próximo trecho.</p>
-          <div class="story-principles">
-            <span><b>01</b> Escolha clara</span>
-            <span><b>02</b> Processo simples</span>
-            <span><b>03</b> Liberdade real</span>
-          </div>
         </div>
+      </div>
+      <div class="story-cards" aria-label="Como funciona a experiência de locação">
+        <article class="story-card">
+          <span class="story-card-index">01 <i></i> ESCOLHA</span>
+          <h3>Encontre sua rota.</h3>
+          <p>Compare categoria, motor, ano e valores demonstrativos para encontrar um modelo que combine com o seu dia.</p>
+          <span class="story-card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="story-card">
+          <span class="story-card-index">02 <i></i> CONVERSE</span>
+          <h3>Resolva direto.</h3>
+          <p>Chame pelo WhatsApp para confirmar disponibilidade, documentos e condições antes de fechar a locação.</p>
+          <span class="story-card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="story-card">
+          <span class="story-card-index">03 <i></i> SIGA</span>
+          <h3>Escolha seu ritmo.</h3>
+          <p>Considere o período e a rota que fazem sentido para sua rotina, do trabalho ao fim de semana.</p>
+          <span class="story-card-arrow" aria-hidden="true">↗</span>
+        </article>
       </div>
       <div class="manifesto-strip" aria-hidden="true">
         <span>cidade</span><i></i><span>estrada</span><i></i><span>aventura</span><i></i><span>trabalho</span>
       </div>
     </section>
 
+    <div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-story-catalog" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e8ecf1"/><stop offset="1" stop-color="#080c14"/></linearGradient></defs><path d="M0 42c186 48 315-26 490 2s300 53 480 14 312-35 470 0v54H0Z" fill="url(#wave-story-catalog)"/><path d="M0 42c186 48 315-26 490 2s300 53 480 14 312-35 470 0" fill="none" stroke="#168fe0" stroke-opacity=".42" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
     <section class="catalog section-dark" id="catalogo" aria-labelledby="catalog-title">
       <div class="section-marker marker-dark"><span>KM 118</span><b></b></div>
       <div class="catalog-head">
         <div>
           <h2 id="catalog-title">Encontre a moto que combina com a sua rota.</h2>
-          <p>Dados e valores demonstrativos para visualização do futuro catálogo.</p>
+          <p id="catalog-sync-status" aria-live="polite">Conectando ao painel de gestão...</p>
         </div>
-        <div class="catalog-count"><strong id="result-count">30</strong><span>motos na rota</span></div>
+        <div class="catalog-count"><strong id="result-count">0</strong><span>motos na rota</span></div>
       </div>
       <div class="catalog-tools">
         <div class="filter-group" aria-label="Filtrar por categoria">
@@ -108,6 +151,7 @@
           <button class="filter" type="button" data-filter="estrada" aria-pressed="false">Estrada</button>
           <button class="filter" type="button" data-filter="aventura" aria-pressed="false">Aventura</button>
           <button class="filter" type="button" data-filter="classica" aria-pressed="false">Clássicas</button>
+          <button class="filter" type="button" data-filter="trabalho" aria-pressed="false">Trabalho</button>
         </div>
         <label class="search-box">
           <span class="sr-only">Buscar por nome ou modelo</span>
@@ -116,7 +160,7 @@
         </label>
       </div>
       <div class="bike-grid" id="bike-grid" aria-live="polite"></div>
-      <button class="show-more" id="show-more" type="button" hidden>Mostrar todas as 30 motos</button>
+      <button class="show-more" id="show-more" type="button" hidden>Mostrar mais motos</button>
       <div class="empty-state" id="empty-state" hidden>
         <strong>Nenhuma moto encontrada.</strong>
         <span>Tente outro nome ou limpe o filtro.</span>
@@ -125,6 +169,7 @@
     </section>
 
     <div class="services-wrap">
+<div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-catalog-services" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#080c14"/><stop offset="1" stop-color="#1565c0"/></linearGradient></defs><path d="M0 55c170-48 331 22 504 12s270-52 446-26 330 43 490 2v69H0Z" fill="url(#wave-catalog-services)"/><path d="M0 55c170-48 331 22 504 12s270-52 446-26 330 43 490 2" fill="none" stroke="#4bb7ff" stroke-opacity=".48" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
 <section class="services section-blue" id="servicos" aria-labelledby="services-title">
       <div class="section-marker marker-blue"><span>KM 203</span><b></b></div>
       <div class="services-head">
@@ -140,6 +185,7 @@
     </section>
   </div>
 
+  <div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-services-roadbook" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1565c0"/><stop offset="1" stop-color="#e8ecf1"/></linearGradient></defs><path d="M0 46c196 35 304-27 491-3s312 46 487 13 300-27 462-3v61H0Z" fill="url(#wave-services-roadbook)"/><path d="M0 46c196 35 304-27 491-3s312 46 487 13 300-27 462-3" fill="none" stroke="#b8e4ff" stroke-opacity=".52" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
   <section class="roadbook section-light" aria-labelledby="roadbook-title">
       <div class="section-marker"><span>KM 271</span><b></b></div>
       <div class="roadbook-layout">
@@ -151,9 +197,18 @@
           <li><span>04</span><div><h3>Retire e siga</h3><p>Faça a vistoria, receba as orientações e comece o seu trecho.</p></div></li>
         </ol>
       </div>
+      <div class="roadbook-gallery" aria-label="Artes promocionais da locadora">
+        <figure class="roadbook-poster">
+          <img src="assets/first-rental-poster-1.png" alt="Arte promocional da Loca7 Motos com motos e informações sobre os requisitos e itens incluídos na locação." width="1016" height="1280" loading="lazy" decoding="async">
+        </figure>
+        <figure class="roadbook-poster">
+          <img src="assets/first-rental-poster-2.png" alt="Arte promocional da Loca7 Motos mostrando motos da frota e informações de preço e itens incluídos." width="1051" height="1280" loading="lazy" decoding="async">
+        </figure>
+      </div>
       <p class="demo-note">Fluxo ilustrativo. Regras, documentos e condições finais serão substituídos pelos dados reais da locadora.</p>
     </section>
 
+    <div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-roadbook-cta" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e8ecf1"/><stop offset="1" stop-color="#1565c0"/></linearGradient></defs><path d="M0 55c169-46 334 12 503 8s298-42 469-12 314 39 468 4v57H0Z" fill="url(#wave-roadbook-cta)"/><path d="M0 55c169-46 334 12 503 8s298-42 469-12 314 39 468 4" fill="none" stroke="#168fe0" stroke-opacity=".48" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
     <section class="final-cta" aria-labelledby="cta-title">
       <div class="cta-rings" aria-hidden="true"></div>
       <div>
@@ -163,24 +218,99 @@
       </div>
     </section>
 
+    <div class="section-transition" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-cta-rental" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1565c0"/><stop offset="1" stop-color="#080e18"/></linearGradient></defs><path d="M0 50c181 41 318-26 497-4s304 47 481 14 311-29 462-1v53H0Z" fill="url(#wave-cta-rental)"/><path d="M0 50c181 41 318-26 497-4s304 47 481 14 311-29 462-1" fill="none" stroke="#4bb7ff" stroke-opacity=".48" stroke-width="1.3" vector-effect="non-scaling-stroke"/></svg></div>
+    <section class="rental-inquiry section-dark" id="quero-alugar" aria-labelledby="rental-title">
+      <div class="rental-heading">
+        <span class="rental-kicker">PRÓXIMO PASSO</span>
+        <h2 id="rental-title">Quero alugar.</h2>
+        <p>Conte um pouco sobre o que procura. A equipe continua o atendimento com você pelo WhatsApp.</p>
+      </div>
+      <form class="rental-form" id="rental-interest-form" autocomplete="on">
+        <div class="rental-fields">
+          <label class="form-field">
+            <span>Nome</span>
+            <input name="nome" type="text" autocomplete="name" maxlength="100" placeholder="Seu nome completo" required>
+          </label>
+          <label class="form-field">
+            <span>WhatsApp</span>
+            <input name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" placeholder="(00) 00000-0000" required>
+          </label>
+          <label class="form-field">
+            <span>Cidade</span>
+            <input name="cidade" type="text" autocomplete="address-level2" maxlength="80" placeholder="Sua cidade" required>
+          </label>
+          <fieldset class="form-field cnh-field">
+            <legend>Possui CNH?</legend>
+            <div class="choice-row">
+              <label><input type="radio" name="cnh" value="Sim" required><span>Sim</span></label>
+              <label><input type="radio" name="cnh" value="Não" required><span>Não</span></label>
+            </div>
+          </fieldset>
+          <label class="form-field cnh-category-field" id="cnh-category-field" hidden>
+            <span>Categoria da CNH</span>
+            <select name="categoria" id="cnh-category" disabled>
+              <option value="">Selecione</option>
+              <option value="A">A</option>
+              <option value="AB">AB</option>
+              <option value="ACC">ACC</option>
+              <option value="Outra">Outra</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>Tipo de plano</span>
+            <select name="plano" required>
+              <option value="">Escolha um plano</option>
+              <option value="Diária">Diária</option>
+              <option value="Semanal">Semanal</option>
+              <option value="Mensal">Mensal</option>
+            </select>
+          </label>
+          <label class="form-field">
+            <span>Moto de interesse <small>opcional</small></span>
+            <input name="moto" type="text" maxlength="100" placeholder="Modelo ou categoria">
+          </label>
+          <label class="form-field form-field-wide">
+            <span>Observação <small>opcional</small></span>
+            <textarea name="observacao" rows="3" maxlength="500" placeholder="Se quiser, conte mais sobre o que precisa"></textarea>
+          </label>
+        </div>
+        <div class="rental-form-footer">
+          <p>Seus dados não são cadastrados nem armazenados por este formulário; eles seguem somente na mensagem do WhatsApp.</p>
+          <button class="button button-primary" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="rental-form-status" id="rental-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="section-transition section-transition-subtle" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-rental-contact" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#080e18"/><stop offset="1" stop-color="#080c14"/></linearGradient></defs><path d="M0 55c168-34 321 16 500 8s304-39 480-9 308 28 460 0v58H0Z" fill="url(#wave-rental-contact)"/><path d="M0 55c168-34 321 16 500 8s304-39 480-9 308 28 460 0" fill="none" stroke="#168fe0" stroke-opacity=".32" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg></div>
     <section class="contact section-dark" id="contato" aria-labelledby="contact-title">
       <div class="contact-heading">
         <h2 id="contact-title">Onde a próxima rota começa.</h2>
-        <p>Informações provisórias para você visualizar o rodapé final do projeto.</p>
+        <p>Fale com a equipe ou veja a localização demonstrativa da locadora.</p>
       </div>
-      <div class="contact-grid">
-        <a href="tel:+5511999999999"><span>Telefone</span><strong>(11) 99999-9999</strong></a>
-        <a href="mailto:ola@rastromotos.com.br"><span>E-mail</span><strong>ola@rastromotos.com.br</strong></a>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <a class="contact-item" href="tel:+5511999999999"><span>Telefone / WhatsApp</span><strong>(11) 99999-9999</strong></a>
+          <div class="contact-item contact-item-placeholder"><span>Instagram</span><strong>Perfil oficial</strong><small>Configure o @ da locadora</small></div>
+          <a class="contact-item" href="mailto:ola@rastromotos.com.br"><span>E-mail</span><strong>ola@rastromotos.com.br</strong></a>
+        </div>
         <a class="map-card" href="https://www.google.com/maps/search/?api=1&query=Avenida+Paulista+São+Paulo" target="_blank" rel="noopener">
-          <span>Localização demonstrativa</span><strong>Av. Paulista, São Paulo — SP</strong><em>Abrir no Google Maps ↗</em>
+          <span class="map-illustration" aria-hidden="true"><i class="map-road map-road-one"></i><i class="map-road map-road-two"></i><i class="map-pin"></i></span>
+          <span class="map-copy"><span>Localização demonstrativa</span><strong>Av. Paulista, São Paulo — SP</strong><em>Abrir no Google Maps ↗</em></span>
         </a>
-        <div class="hours"><span>Atendimento</span><strong>Seg–Sáb · 08h às 19h</strong><small>Horário ilustrativo</small></div>
       </div>
     </section>
   </main>
 
+  <div class="section-transition section-transition-subtle" aria-hidden="true"><svg viewBox="0 0 1440 112" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="wave-contact-footer" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#080c14"/><stop offset="1" stop-color="#080c14"/></linearGradient></defs><path d="M0 54c182 24 330-21 501-6s306 34 479 11 308-21 460 1v52H0Z" fill="url(#wave-contact-footer)"/><path d="M0 54c182 24 330-21 501-6s306 34 479 11 308-21 460 1" fill="none" stroke="#168fe0" stroke-opacity=".28" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg></div>
   <footer>
-    <a class="brand footer-brand" href="#topo"><span class="brand-mark">R</span><span>RASTRO<br><b>MOTOS</b></span></a>
+    <a class="brand brand-loca7 footer-brand" href="#topo" aria-label="Loca7 Motos, início">
+      <svg class="loca7-wordmark" viewBox="0 0 168 58" role="img" aria-label="Loca7 Motos">
+        <text class="loca7-word" x="2" y="39">Loca</text>
+        <path class="loca7-seven" d="M102 7h51L117 50h-17l23-31h-27z"></path>
+        <text class="loca7-motos" x="65" y="53">MOTOS</text>
+      </svg>
+    </a>
     <p>© 2026 Rastro Motos. Projeto demonstrativo — dados fictícios.</p>
     <a href="#topo">Voltar ao topo ↑</a>
   </footer>
@@ -188,9 +318,9 @@
   <a class="whatsapp-float" href="https://wa.me/5511999999999?text=Olá%2C%20vim%20pelo%20site%20da%20Rastro%20Motos." target="_blank" rel="noopener" aria-label="Falar com a Rastro Motos pelo WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 2.1 17.6L.5 23.5l6-1.6a11.7 11.7 0 0 0 14-18.4Zm-8.3 16.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.6 1 1-3.5-.2-.4a8.6 8.6 0 1 1 8.3 4.5Zm4.7-6.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1a7 7 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.5a.5.5 0 0 0 0-.5l-.8-2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3 0-.1-.3-.2-.5-.3Z"/></svg>
   </a>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="app.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="app.js?v=20261014-1"></script>
 </body>
 </html>
-

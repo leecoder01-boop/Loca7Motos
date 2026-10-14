@@ -21,6 +21,9 @@ export async function proxy(request: NextRequest) {
   });
   const {data,error} = await supabase.auth.getClaims();
   const path = request.nextUrl.pathname.replace(/^\/admin(?=\/|$)/, "");
+  // The public site reads only the deliberately limited catalog fields from this route.
+  // Keep it outside the panel login flow; the route itself enforces its CORS allowlist.
+  if (path === "/api/catalogo" || path === "/api/catalogo/") return response;
   if ((!data?.claims || error) && !path.startsWith("/login")) {
     const url = new URL("/admin/login/", request.url);
     const redirect = NextResponse.redirect(url);

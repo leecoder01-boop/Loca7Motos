@@ -21,12 +21,14 @@ export const motoInputSchema=z.object({
   valor_locacao:text(30).transform(parsePrice).refine(value=>Number.isFinite(value)&&value>=0&&value<=9999999999.99,'Informe um valor não negativo com até duas casas decimais.'),
   tipo_valor:z.enum(['diaria','semanal','mensalidade']),
   status:z.enum(['disponivel','alugada','manutencao','indisponivel']),
+  foto_url:z.string().trim().max(2048,'Use no máximo 2048 caracteres.').default('').transform(value=>value||null).refine(value=>value===null||/^https:\/\/[^\s]+$/i.test(value),'Informe uma URL HTTPS válida para a foto.'),
+  publicado:z.string().default('true').transform(value=>value==='true'||value==='on').pipe(z.boolean()),
   observacoes:text(5000),
 });
 export const motoRecordSchema=z.object({
   id:z.uuid(),marca:z.string(),modelo:z.string(),ano:z.number(),placa:z.string(),quilometragem:z.number(),valor_locacao:z.number(),
   status:z.enum(['disponivel','alugada','manutencao','indisponivel']),created_at:z.string().datetime({offset:true}),
-  cor:z.string().default(''),tipo_valor:z.enum(['diaria','semanal','mensalidade']).default('diaria'),observacoes:z.string().default(''),updated_at:z.string().datetime({offset:true}).optional(),deleted_at:z.string().datetime({offset:true}).nullable().default(null),
+  cor:z.string().default(''),tipo_valor:z.enum(['diaria','semanal','mensalidade']).default('diaria'),foto_url:z.string().nullable().default(null),publicado:z.boolean().default(true),observacoes:z.string().default(''),updated_at:z.string().datetime({offset:true}).optional(),deleted_at:z.string().datetime({offset:true}).nullable().default(null),
 });
 export type Moto=z.infer<typeof motoRecordSchema>;
 export type MotoValues=z.input<typeof motoInputSchema>;
